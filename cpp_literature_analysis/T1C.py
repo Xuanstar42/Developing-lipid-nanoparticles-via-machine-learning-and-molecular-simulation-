@@ -162,7 +162,7 @@ fig_h = max(TREE_BASE_H, n_tree * TREE_PER_ITEM_H)
 plt.figure(figsize=(TREE_FIG_W, fig_h))
 ax = plt.gca()
 
-# 恢复颜色，不再强制全黑
+# Use colored branches for the top-20 dendrogram.
 max_d = np.max(Z_tree[:, 2])
 color_thr = 0.7 * max_d
 

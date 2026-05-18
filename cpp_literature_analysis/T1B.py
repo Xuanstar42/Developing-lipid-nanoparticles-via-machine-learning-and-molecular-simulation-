@@ -1,8 +1,11 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+
 # -----------------------------
 # Q2 Step 1: Build modification signature and count
 # -----------------------------
-
-import pandas as pd
 
 df_mod = pd.read_csv("data2.csv")
 
@@ -36,7 +39,7 @@ def build_signature(row):
     if row["mod_none"] == 1:
         return "none"
 
-    # fallback safety
+    # Default to no specific modification if no flag is set.
     return "none"
 
 
@@ -57,12 +60,7 @@ print(
     ].head()
 )
 
-# Save dataset
 df_mod.to_csv("data2_with_mod_signature.csv", index=False)
-
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 
 # -----------------------------
 # Q2 Step 2: Paper-level modification statistics
@@ -72,10 +70,6 @@ import matplotlib.pyplot as plt
 # 2. single modification type usage
 # 3. modification complexity
 # All counts are based on unique paper usage, not row usage.
-
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 
 # -----------------------------
 # Load data
@@ -422,7 +416,7 @@ for x in [5, 10, 20]:
         )
         print()
 
-# Optional: print the exact peptide names for top X
+# Print the exact peptide names for the top X backbones.
 x = 10
 topx_names = summary_df.head(x)["peptide_backbone_clean"].tolist()
 print(f"Top {x} peptide backbones:")

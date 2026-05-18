@@ -250,11 +250,11 @@ print(f"Top 10 backbones account for {top10_fraction:.2%} of all backbone-paper 
 print(f"Top 20 backbones account for {top20_fraction:.2%} of all backbone-paper occurrences.")
 
 # -----------------------------
-# 15. Print ready-to-use interpretation sentences
+# 15. Print result statements
 # -----------------------------
 n_total_backbones = backbone_paper_counts["peptide_backbone_clean"].nunique()
 
-print("\nSuggested result statements:")
+print("\nResult statements:")
 print(
     f"Across the dataset, {n_total_backbones} unique peptide backbones were identified."
 )
@@ -505,12 +505,12 @@ plt.savefig("yearly_shannon_diversity_index.png", dpi=300, bbox_inches="tight")
 plt.show()
 
 # -----------------------------
-# 22. Print interpretation-ready summary
+# 22. Print temporal trend summary
 # -----------------------------
 latest_year = yearly_summary_df["year"].max()
 latest_row = yearly_summary_df[yearly_summary_df["year"] == latest_year].iloc[0]
 
-print("\nSuggested interpretation:")
+print("\nTemporal trend summary:")
 print(
     "The temporal analysis was anchored to the globally most reused peptide backbones "
     "and excluded the incomplete year 2026."

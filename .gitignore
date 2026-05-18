@@ -1,0 +1,31 @@
+# Local data files
+*.xlsx
+*.xls
+*.csv
+~$*
+
+# Manuscript or supplementary draft files
+*.docx
+*.doc
+*.pdf
+*.pptx
+*.rtf
+
+# Generated figures and analysis outputs
+*.png
+figures_T4/
+figures_T4B/
+figures_pca_umap/
+
+# Local experimental or unused scripts
+T4B.py
+T5.py
+
+# Python/cache artifacts
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Environment files
+.venv/
+venv/
